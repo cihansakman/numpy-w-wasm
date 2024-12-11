@@ -1,0 +1,5 @@
+__pycache__
+analyze_dataset/
+numpy/
+regex/
+*.wasm
