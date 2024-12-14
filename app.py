@@ -4,7 +4,7 @@ from utils import load_data, analyze_data, help_message
 from analyze_dataset import exports
 
 
-class AnalyzeDataset(analyze_dataset.AnalyzeDataset):
+class Analyze(exports.Analyze):
     def analyze(self, file_path:str) -> str:
         print(f'Analyzing {file_path}...')
         data = load_data(file_path=file_path)
@@ -43,5 +43,5 @@ class Run(exports.Run):
             help_message()
             exit(-1)
 
-        analyze_obj = AnalyzeDataset()
+        analyze_obj = Analyze()
         print(analyze_obj.analyze(str(args[0])))

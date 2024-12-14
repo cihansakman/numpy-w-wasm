@@ -1,7 +1,10 @@
 package example:analyze-dataset;
 
+interface analyze{
+    analyze: func(file-path: string) -> result<string, string>;
+}
 world analyze-dataset{
     include wasi:cli/command@0.2.0;
 
-    export analyze: func(file-path: string) -> result<string, string>;
+    export analyze;
 }
