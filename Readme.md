@@ -25,3 +25,12 @@ componentize-py -d wit -w analyze-dataset componentize app -o analyze-dataset.wa
 wasmtime run --dir files/::files/ analyze-dataset.wasm files/medical_cost.csv
 ```
 Ensure that you mount the appropriate host directory when running the module.
+
+### No module named analyze_dataset Error
+
+This means that componentize-py couldn't generate the bindings automatically. So we need to generate the bindings using the **bindings command.
+
+```
+componentize-py -d wit -w analyze_dataset bindings analyze_dataset
+```
+
